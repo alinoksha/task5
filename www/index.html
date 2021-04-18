@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>ИНТЕРВОЛГА Задание #5</title>
+</head>
+<body>
+    <div class="countries-table">
+        <table class="table table-hover caption-top">
+            <caption>Список стран</caption>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Название</th>
+                    <th>Код</th>
+                    <th>Управление</th>
+                </tr>
+            </thead>
+            <tbody class="countries">
+            </tbody>
+        </table>
+    </div>
+    <div class="no-countries">
+        <p>Пока стран нет</p>
+    </div>
+    <button type="button" class="btn btn-outline-dark add-country-btn" data-toggle="modal" data-target="#addCountryModal">Добавить</button>
+    <!-- Modal -->
+    <div class="modal fade" id="addCountryModal" tabindex="-1" role="dialog" aria-labelledby="addCountryModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addCountryModalLabel">Добавление страны</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group flex-nowrap">
+                        <input type="text" class="form-control" placeholder="Название" id="name">
+                        <input type="text" class="form-control" placeholder="Код" id="code">
+                    </div>
+                    <div class="input-error">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-modal-btn" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary save-modal-btn">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    $(document).ready(init);
+</script>
+</html>

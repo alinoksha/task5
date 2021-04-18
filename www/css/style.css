@@ -1,0 +1,18 @@
+.countries-table {
+    padding: 10px;
+}
+.countries-table table {
+    width: auto;
+}
+.input-error {
+    display: none;
+    color: red;
+    opacity: 0.6;
+}
+.no-countries {
+    display: none;
+    margin: 10px 0px 0px 10px;
+}
+.add-country-btn {
+    margin-left: 10px;
+}
