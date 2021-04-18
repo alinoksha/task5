@@ -14,7 +14,7 @@ class Country
     {
         $data['name'] = $this->db->prepare($data['name']);
         $data['code'] = $this->db->prepare($data['code']);
-        if (!$this->getByName($data['name'])) {
+        if ($data['name'] && !$this->getByName($data['name'])) {
             $sql = "INSERT INTO `country`(`name`, `code`) VALUES('{$data['name']}', '{$data['code']}')";
             $this->db->query($sql);
             return true;

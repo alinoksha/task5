@@ -18,8 +18,8 @@ function init()
     // Кнопка "Сохранить" в модальном окне 
     $(document).on('click', '#addCountryModal .save-modal-btn', function() {
         let country = {};
-        country.name = $('#addCountryModal .form-control#name').val();
-        country.code = $('#addCountryModal .form-control#code').val();
+        country.name = $('#addCountryModal .form-control#name').val().trim();
+        country.code = $('#addCountryModal .form-control#code').val().trim();
         addCountry(country);
         refresh();
         $('#addCountryModal .form-control').val('');
